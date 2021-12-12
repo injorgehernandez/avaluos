@@ -2,7 +2,8 @@
 
 //include("backend/seguridad.php");
 
-$usuario = $_SESSION["usuario"];
+
+error_reporting(0);
 
 ?>
 
@@ -37,7 +38,7 @@ $usuario = $_SESSION["usuario"];
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>AVALUOS</title>
+    <title>SIFRESH</title>
 
     <!-- vendor css -->
     <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -53,6 +54,22 @@ $usuario = $_SESSION["usuario"];
     <link href="../lib/jquery.steps/jquery.steps.css" rel="stylesheet">
     <link href="../lib/rickshaw/rickshaw.min.css" rel="stylesheet">
 
+    <link href="../lib/jt.timepicker/jquery.timepicker.css" rel="stylesheet">
+
+
+     <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="../lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="../lib/jquery-switchbutton/jquery.switchButton.css" rel="stylesheet">
+    <link href="../lib/highlightjs/github.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+    <link href="../lib/jquery-toggles/toggles-full.css" rel="stylesheet">
+    <link href="../lib/jt.timepicker/jquery.timepicker.css" rel="stylesheet">
+    <link href="../lib/spectrum/spectrum.css" rel="stylesheet">
+    <link href="../lib/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="../lib/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../lib/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../css/bracket.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -61,9 +78,9 @@ $usuario = $_SESSION["usuario"];
   <body>
 
      <!-- ########## START: LEFT PANEL ########## -->
-    <div class="br-logo"><img src="" class="logo-main"></a></div>
+    <div class="br-logo"><img src="../img/logo_sifresh.png" class="logo-main"></a></div>
     <div class="br-sideleft overflow-y-auto">
-      <label class="sidebar-label pd-x-15 mg-t-20">Avaluos</label>
+      <label class="sidebar-label pd-x-15 mg-t-20">Sifresh</label>
       <div class="br-sideleft-menu">
         <a href="#" class="br-menu-link active" onclick="cargaContenido('dashboard.php')">
           <div class="br-menu-item">
@@ -81,24 +98,34 @@ $usuario = $_SESSION["usuario"];
         <a href="#" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon  icon ion-ios-list-outline tx-22"></i>
-            <span class="menu-item-label">Valores Catastrales</span>
+            <span class="menu-item-label">Pedidos</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_valores.php')">Todos los registros</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_citas_valores.php')">Citas</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_visitas_valores.php')">Visita al inmueble</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_pedidos.php')">1 Pedidos de compra</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_ruta.php')">2 Pedidos de venta</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_pesos.php')">3 Registro de pesos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_factura.php')"> 4 Pedidos de venta <br>pendientes de Facturar</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_factura_2.php')">5 Pedidos pendientes de <br>registro de factura de compra</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_facturas_3.php')">6 Registro de factura de <br>proveedor de servicios</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_factura_2_2.php')">7 Pedidos pendientes de <br>pago al proveedor</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_facturas_3_2.php')">8 Pedidos pendientes de <br>pago al proveedor de <br>servicios</a></li>
+
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_factura_1_2.php')">9 Pedidos pendientes de <br>cobro al cliente</a></li>
+           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_pedidos_cerrados.php')">10 Pedidos cerrados</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_pedidos_cerrados_verificados.php')">11 Pedidos cerrados y <br>verificados</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_pedidos_final.php')">12 Pedidos cerrados,<br> verificados y pagados <br>al comercial</a></li>
         </ul>
 
 
-        <a href="#" class="br-menu-link">
+        <!--a href="#" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon  icon ion-ios-list-outline tx-22"></i>
             <span class="menu-item-label">Avaluos</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
-          </div><!-- menu-item -->
-        </a><!-- br-menu-link -->
+          </div>
+        </a>
         <ul class="br-menu-sub nav flex-column">
           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_avaluos.php')">Todos los registros</a></li>
           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_citas.php')">Citas</a></li>
@@ -107,7 +134,7 @@ $usuario = $_SESSION["usuario"];
           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_catastro.php')">Catastro</a></li>
           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_entrega.php')">Entrega</a></li>
           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_pagos.php')">Pagos</a></li>
-        </ul>
+        </ul-->
 
 
          <a href="#" class="br-menu-link">
@@ -118,8 +145,12 @@ $usuario = $_SESSION["usuario"];
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_usuarios.php')">Usuarios</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_catalogo.php')">Catalogos</a></li>
+           <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_usuarios.php')">Usuarios</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_proveedores.php')">Proveedores</a></li>
+
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_producto.php')">Productos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_prestador_servicios.php')">Prestador de servicios</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" onclick="cargaContenido('resumen_cliente.php')">Cliente</a></li>
         </ul>
         
       </div><!-- br-sideleft-menu -->

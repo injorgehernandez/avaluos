@@ -1,0 +1,165 @@
+.sedes .img-fluid {
+    max-width: 100% !important;
+    height: auto;
+    height: 120px;
+    object-fit: cover;
+    background-color: black;
+}
+
+
+.logo-login{
+	max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.logo-main{
+	width: 50%;
+    margin-left: 40px;
+}
+
+
+
+td .btn-danger {
+    color: #dc3545;
+    background-color: white;
+    border-color: white;
+}
+
+/*LOGIN*/
+.bg-br-primary {
+    background-color: #2D693F;
+}
+
+
+
+/*MENU*/
+
+.br-menu-link.active {
+
+    background-color: #74B457;
+    color: #fff;
+}
+
+.br-menu-sub {
+
+    background-color: #A6D194;
+    color: #fff;
+}
+
+.br-menu-sub .nav-link {
+    color: #799B6A;
+}
+
+.br-menu-link:hover, .br-menu-link:focus {
+  color: #fff;
+  background-color: #74B457;
+}
+
+
+.br-menu-sub .nav-link::before {
+ 
+  background-color: #fff;
+}
+.br-menu-sub .nav-link:hover, .br-menu-sub .nav-link:focus {
+  color: #fff;
+}
+.br-menu-sub .nav-link:hover::before, .br-menu-sub .nav-link:focus::before {
+ 
+  background-color: #fff;
+}
+.br-menu-sub .nav-link.active {
+  color: #fff;
+}
+.br-menu-sub .nav-link.active::before {
+  background-color: #fff;
+}
+
+.br-menu-link.show-sub {
+    background-color: #74B457;
+}
+
+
+a {
+    color: #74B457;
+}
+
+
+.br-sideleft {
+    background-color: #2D693F !important;
+}
+
+
+/*BTN-INFO*/
+
+
+.btn-info {
+  background-color: #74B457;
+  border-color: #74B457;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: #6ba351;
+  border-color: #6ba351;
+}
+.btn-info:focus, .btn-info.focus {
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.5);
+}
+.btn-info.disabled, .btn-info:disabled {
+  background-color: #74B457;
+  border-color: #74B457;
+}
+.btn-info:active, .btn-info.active, .show > .btn-info.dropdown-toggle {
+  background-color: #6ba351;
+  background-image: none;
+  border-color: #6ba351;
+}
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #74B457;
+    border-color: #74B457;
+}
+
+
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background-color: #74B457;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:focus {
+  background-color: #74B457;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current:focus {
+  background-color: #74B457;
+}
+
+
+table.dataTable thead th.sorting_asc::before, table.dataTable thead td.sorting_asc::before {
+  border-bottom-color: #74B457;
+}
+table.dataTable thead th.sorting_desc::after, table.dataTable thead td.sorting_desc::after {
+  border-top-color: #74B457;
+}
+
+
+.wizard > .actions a,
+.wizard > .actions a:hover,
+.wizard > .actions a:active {
+  background-color: #74B457;
+ 
+}
+
+
+
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+  background-color: #568241;
+}
+
+
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+    background-color: #74B457;
+}
+
+

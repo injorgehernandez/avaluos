@@ -10,11 +10,11 @@
 <div class="br-pageheader pd-y-15 pd-l-20">
   <nav class="breadcrumb pd-0 mg-0 tx-12">
     <a class="breadcrumb-item" href="index.php">Inicio</a>
-    <span class="breadcrumb-item active">Usuarios</span>
+    <span class="breadcrumb-item active">Prestador de servicios</span>
   </nav>
 </div><!-- br-pageheader -->
 <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
-  <h4 class="tx-gray-800 mg-b-5">Uusuarios</h4>
+  <h4 class="tx-gray-800 mg-b-5">Prestador de servicios</h4>
   <p class="mg-b-0"></p>
 </div>
 
@@ -24,8 +24,8 @@
 
     <div class="header">
   
-        <legend>Listado de Usuario
-        <a href="" class="btn btn-info btn-with-icon pull-right" href="" data-toggle="modal" data-target="#modal_usuario" onclick="limpiar();">
+        <legend>Listado de Prestador de servicios
+        <a href="" class="btn btn-info btn-with-icon pull-right" href="" data-toggle="modal" data-target="#modal_prestador_servicios" >
           <div class="ht-40 justify-content-between">
             <span class="pd-x-15">Nuevo</span>
             <span class="icon wd-40"><i class="fa fa-plus-circle"></i></span>
@@ -66,18 +66,18 @@
 
 
 
-<div id="modal_usuario" class="modal fade">
+<div id="modal_prestador_servicios" class="modal fade">
   
   <div class="modal-dialog modal-dialog-vertical-center modal-lg" role="document">
     <div class="modal-content bd-0 tx-14">
-      <form id="guardar_usuario" method="post" enctype="multipart/form-data"> 
+      <form id="guardar_prestador_servicios" method="post" enctype="multipart/form-data"> 
       <div class="modal-header pd-y-20 pd-x-25">
-        <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Usuario</h6>
+        <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Comercial de compra</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body pd-25" id="div_modal_usuario">
+      <div class="modal-body pd-25" id="div_modal_prestador_servicios">
        
         <div class="form-layout">
 
@@ -85,153 +85,122 @@
       
             <h6 class="text-center"></h6>
             <div class="row">
-               <div class="header col-md-12">
-                    <legend>Datos Generales</legend>
-                </div>
-                <div class="col-md-4">
+
+
+                <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label">Nombre</label>
-                        <input class="form-control valid" type="text" name="nombre" id="nombre" value="" placeholder="" required="">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label">Apellidos</label>
-                        <input class="form-control valid" type="text" name="apellidos" id="apellidos" value="" placeholder="" required="">
+                        <label class="control-label">Servicio que presta</label>
+                        <input class="form-control valid" type="text" name="servicio_que_presta" id="servicio_que_presta" value="" placeholder="" required="">
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Nombre fiscal</label>
+                        <input class="form-control valid" type="text" name="nombre_fiscal" id="nombre_fiscal" value="" placeholder="" required="">
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Nombre corto</label>
                         <input class="form-control valid" type="text" name="nombre_corto" id="nombre_corto" value="" placeholder="" required="">
                     </div>
                 </div>
-            </div>
-            <div class="row">
 
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label">Direccion residencia</label>
-                        <input class="form-control valid" type="text" name="direccion_residencia" id="direccion_residencia"  value="" placeholder="" required="">
+                        <label class="control-label">Direccion fiscal</label>
+                        <input class="form-control valid" type="text" name="direccion_fiscal" id="direccion_fiscal"  value="" placeholder="" required="">
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Código postal</label>
                         <input class="form-control valid" type="text" name="cp" id="cp" placeholder="" required="">
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Municipio</label>
-                        <input class="form-control valid" type="text" name="municipio" id="municipio"  placeholder="" required="">
+                        <input class="form-control valid" type="text" name="municipio" id="municipio" placeholder="" required="">
                     </div>
                 </div>
 
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">País</label>
-                       <input class="form-control valid" type="text" name="pais" id="pais"  placeholder="" required="">
+                       <input class="form-control valid" type="text" name="pais" id="pais" placeholder="" required="">
                     </div>
                 </div>
-            </div>
-            
-            <div class="row">
 
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">EORI/VAT</label>
                         <input class="form-control valid" type="text" name="eori_vat" id="eori_vat" placeholder="" required="">
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label">Email Sifresh</label>
-                       <input class="form-control valid" type="email" name="email_sifresh"  id="email_sifresh" value="" placeholder="" required="">
-                    </div>
-                </div>
+              
 
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Email Pagos</label>
                        <input class="form-control valid" type="email" name="email_pagos"  id="email_pagos" value="" placeholder="" required="">
                     </div>
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="header col-md-12">
-                    <legend>Información bancaria</legend>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Email Comercial</label>
+                       <input class="form-control valid" type="email" name="email_comercial"  id="email_comercial" value="" placeholder="" required="">
+                    </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Teléfono Comercial</label>
+                       <input class="form-control valid" type="text" name="telefono_comercial"  id="telefono_comercial" value="" placeholder="" required="">
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Banco moneda</label>
                        <input class="form-control valid" type="text" name="banco_moneda"  id="banco_moneda" value="" placeholder="" required="">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Banco nombre</label>
                        <input class="form-control valid" type="text" name="banco_nombre" id="banco_nombre" value="" placeholder="" required="">
                     </div>
                 </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Banco cuenta</label>
                        <input class="form-control valid" type="text" name="banco_cuenta" id="banco_cuenta" value="" placeholder="" required="">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Banco SWIFT</label>
                        <input class="form-control valid" type="text" name="banco_swift" id="banco_swift" value="" placeholder="" required="">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">Banco BIC</label>
                        <input class="form-control valid" type="text" name="banco_bic" id="banco_bic" value="" placeholder="" required="">
                     </div>
                 </div>
-            </div>
-            <div class="row" >
-                <div class="header col-md-12">
-                    <legend>Usuario</legend>
-                </div>
-              
-                <div class="col-md-4" >
-                    <div class="form-group">
-                        <label class="control-label">Tipo de Usuario</label>
-                        <select data-title="SELECCIONA" name="tipo_usuario" id="tipo_usuario" data-live-search="true"  class="selectpicker form-control" value="<?=$tipo_usuario?>" required="">
-                            <option disabled="" selected="">SELECCIONA</option> 
-                            <option value="1">DIRECCIÓN</option> 
-                            <option value="2">ADMINISTRACIÓN</option>
-                            <option value="3">LOGÍSTICA</option>
-                            <option value="4">COMERCIAL COMPRA</option>
-                            <option value="5">COMERCIAL VENTA</option>
-                            
-                        </select>  
-                    </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label">Contraseña</label>
-                        <input class="form-control valid" type="password" id="contrasenia" name="contrasenia" required="true" placeholder="" aria-required="true"   onChange="validarContrasenia();">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="control-label">Confirma Contraseña</label>
-                        <input class="form-control valid" type="password" id="contrasenia2" name="contrasenia2" required="true" placeholder="" aria-required="true"   onChange="verificarContrasenia();">
-                    </div>
-                </div>
-              
+               
+
             </div>
               
           </div>
@@ -256,14 +225,14 @@
 
 
 
-<div id="procesa_usuario"></div>
+<div id="procesa_prestador_servicios"></div>
 
 
 <script>
 
 $(document).ready (function() {
   $.ajax({
-      url: "../backend/get_usuario.php",
+      url: "../backend/get_prestador_servicios.php",
       beforeSend: function(){
             //imagen de carga
             $("#procesa").html("<p align='center'><img src='../img/ajax-loader.gif' /></p>");
@@ -316,7 +285,7 @@ $(document).ready (function() {
                 var data = table.row( $(this).parents(closestRow)).data();
                 var list_id = data[0];
                 
-                 $('#procesa_usuario').load('../backend/guardar_usuario.php?id_borrar='+list_id);
+                 $('#procesa_comercial_compra').load('../backend/guardar_prestador_servicios.php?id_borrar='+list_id);
                 table.row($tr).remove().draw();
                 e.preventDefault();
             }
@@ -324,7 +293,7 @@ $(document).ready (function() {
 
 
            table.on( 'click', '.modify', function (e) {
-            
+             
               $tr = $(this).closest('tr');
               var data = table.row($tr).data();
               var closestRow = $(this).closest('tr');
@@ -332,10 +301,10 @@ $(document).ready (function() {
               var list_id = data[0];
 
 
-              document.getElementById("div_modal_usuario").innerHTML = "";
+              document.getElementById("div_modal_prestador_servicios").innerHTML = "";
               
-              $('#div_modal_usuario').load('edita_usuario.php?id='+list_id);
-              $('#modal_usuario').modal('show');
+              $('#div_modal_prestador_servicios').load('edita_prestador_servicios.php?id='+list_id);
+              $('#modal_prestador_servicios').modal('show');
               e.preventDefault();
           });
       }       
@@ -344,15 +313,15 @@ $(document).ready (function() {
 });
 
 
-$('#guardar_usuario').submit(function () {
+$('#guardar_prestador_servicios').submit(function () {
 
-    $('#modal_usuario').modal('hide');
+    $('#modal_prestador_servicios').modal('hide');
 
-        $('#procesa_usuario').delay(800).queue(function(nxt){
+        $('#procesa_prestador_servicios').delay(800).queue(function(nxt){
 
-            $.post('../backend/guardar_usuario.php', $('#guardar_usuario').serialize(), function (data, textStatus) {
+            $.post('../backend/guardar_prestador_servicios.php', $('#guardar_prestador_servicios').serialize(), function (data, textStatus) {
         
-                $('#procesa_usuario').append(data);
+                $('#procesa_prestador_servicios').append(data);
             });
             
         });   
@@ -364,14 +333,13 @@ $('#guardar_usuario').submit(function () {
 
 function limpiar(){
 
-  
+  document.getElementById("id").value = "" ;
   document.getElementById("nombre").value = "" ;
   document.getElementById("apellidos").value = "" ;
   document.getElementById("nombre_corto").value = "" ;
   document.getElementById("direccion_residencia").value = "" ;
   document.getElementById("cp").value = "" ;
   document.getElementById("pais").value = "" ;
-  document.getElementById("municipio").value = "" ;
   document.getElementById("eori_vat").value = "" ;
   document.getElementById("email_sifresh").value = "" ;
   document.getElementById("email_pagos").value = "" ;
@@ -380,74 +348,7 @@ function limpiar(){
   document.getElementById("banco_cuenta").value = "" ;
   document.getElementById("banco_swift").value = "" ;
   document.getElementById("banco_bic").value = "" ;
-  document.getElementById("contrasenia").value = "" ;
-  document.getElementById("contrasenia2").value = "" ;
-
-  $("#tipo_usuario").val(""); 
-
-  //document.getElementById("id").value = "" ;
 
 }
-
-
-
-
-function verificarContrasenia(){
-  var p1 = document.getElementById("contrasenia").value;
-  var p2 = document.getElementById("contrasenia2").value;
-  
-
-  if (p1 != p2) {
-      document.getElementById("contrasenia2").setAttribute("class", "form-control error");
-      $('#guardar').hide();
-      alert("Las contraseñas deben de coincidir");
-    
-      return false;
-  } else {
-
-    $('#guardar').show();
-
-      document.getElementById("contrasenia2").setAttribute("class", "form-control valid");
-      return true; 
-  }
-
-}
-
-function validarContrasenia(){
-   var p1 = document.getElementById("contrasenia").value;
-  var p2 = document.getElementById("contrasenia2").value;
-  var espacios = false;
-  var cont = 0;
-  
-   
-  while (!espacios && (cont < p1.length)) {
-    if (p1.charAt(cont) == " ")
-      espacios = true;
-    cont++;
-  }
-   
-  if (espacios) {
-    $('#guardar').hide();
-      document.getElementById("contrasenia").setAttribute("class", "form-control error");
-      alert ("La contraseña no puede contener espacios en blanco");
-      return false;
-  }else{
-    $('#guardar').show();
-      document.getElementById("contrasenia").setAttribute("class", "form-control valid");
-
-  }
-  
-
-}
-
-
- 
-
-
-
-
-
-
-
 
 </script>

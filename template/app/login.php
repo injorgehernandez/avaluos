@@ -28,7 +28,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Avaluos</title>
+    <title>SIFRESH</title>
 
     <!-- vendor css -->
     <link href="../lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -45,12 +45,12 @@
 
       <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
 
-        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><img src="https://tulumcircula.com/assets/img/Logo_TulumCircula.jpg" class="logo-login" style="width: 70%"></div>
+        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><img src="../img/logo_sifresh.png" class="logo-login" style="width: 70%"></div>
 
-        <form method="POST" action="">
+        <form method="POST" action="../backend/validate.php">
         
             <div class="form-group">
-              <input type="usuario" name="Usuario" class="form-control" placeholder="Usuario">
+              <input type="usuario" name="correo" class="form-control" placeholder="Correo">
             </div><!-- form-group -->
             
             <div class="form-group">
